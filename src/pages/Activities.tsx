@@ -122,6 +122,9 @@ function Activities() {
               <ActivityCard
                 key={activity.id}
                 title={activity.title}
+                // text={`${activity.description}`}
+                // text2={`${activity.location} • ${activity.distance}`}
+
                 text={`${activity.location} • ${activity.distance} — ${activity.description}`}
                 image={activity.image}
                 link={`/activities/${activity.id}`}

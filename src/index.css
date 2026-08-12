@@ -474,6 +474,7 @@ main {
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
+  border-radius: 12px 12px 0 0;
 }
 
 .activity-card:hover .card-image,
@@ -702,6 +703,25 @@ main {
   gap: 2rem;
   padding: 3rem 2rem;
 }
+
+.details-tips h2 {
+  margin-top: 2rem;
+  color: #1f5f4a;
+  font-weight: 800;
+}
+
+.details-tips ul {
+  /* margin-block-start: 2rem; */
+  margin-block-end: 2rem;
+  padding: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  background-color: #e8f3ee;
+  border-radius: 12px;
+
+
+}
+
 
 .details-image {
   width: 100%;

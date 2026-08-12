@@ -21,7 +21,7 @@ export const activities: Activity[] = [
     location: "Hagaparken",
     distance: "2 km bort",
     description:
-      "En lugn promenad för hundägare som vill träffa andra i området.",
+      "En lugn promenad för hundägare som vill träffa andra i området. Aktiviteten passar både nya och vana hundägare.",
     image: walkImage,
   },
   {
@@ -31,7 +31,7 @@ export const activities: Activity[] = [
     location: "Vasaparken",
     distance: "3 km bort",
     description:
-      "Enkel träning med fokus på kontakt, inkallning och vardagslydnad.",
+      "Träning med fokus på kontakt, inkallning och vardagslydnad i en trygg, avkopplad och positiv miljö varje söndag från kl. 10.00 till kl. 11.00.",
     image: trainingImage,
   },
   {
@@ -41,7 +41,7 @@ export const activities: Activity[] = [
     location: "Vasastan",
     distance: "3 km bort",
     description:
-      "Träffa andra hundägare på ett hundvänligt café med avslappnad stämning.",
+      "Träffa andra hundägare på ett hundvänligt café med avslappnad stämning och social gemenskap.",
     image: cafeImage,
   },
   {
@@ -51,7 +51,7 @@ export const activities: Activity[] = [
     location: "Djurgården",
     distance: "6 km bort",
     description:
-      "En social dag med lek, tips och aktiviteter för både hundar och ägare.",
+      "En social dag med lek, tips och aktiviteter för både hundar och ägare i en vacker utomhusmiljö.",
     image: aktivitydogImage,
   },
 ];

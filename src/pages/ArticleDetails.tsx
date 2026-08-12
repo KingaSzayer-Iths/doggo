@@ -28,8 +28,18 @@ function ArticleDetails() {
                 <div className="details-content">
                     <h1>{article.title}</h1>
                     <p>{article.description}</p>
-                    <p>Här kan användaren läsa mer om ämnet,
-                        få tips och inspiration.</p>
+                    {article.tips && article.tips.length > 0 && (
+                        <div className="details-tips">
+                            <h2>Tips</h2>
+                            <ul>
+                                {article.tips.map((tip, index) => (
+                                    <li key={index}>{tip}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                    {/* <p>Här kan användaren läsa mer om ämnet,
+                        få tips och inspiration.</p> */}
 
                     {/* <button type="button">
                     Spara artikel
