@@ -37,13 +37,15 @@ function ArticleDetails() {
                                 ))}
                             </ul>
                         </div>
+                        
                     )}
+                    
                     {/* <p>Här kan användaren läsa mer om ämnet,
                         få tips och inspiration.</p> */}
 
-                    {/* <button type="button">
+                    <button type="button">
                     Spara artikel
-                    </button> */}
+                    </button>
                 </div>
             </section>
         </main>

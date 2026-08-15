@@ -39,9 +39,7 @@ function Activities() {
             placeholder="Sök aktiviteter..."
             aria-label="Sök aktiviteter"
             value={searchTerm}
-            onChange={(event) =>
-              setSearchTerm(event.target.value)
-            }
+            onChange={(event) => setSearchTerm(event.target.value)}
           />
 
           <button type="button">Sök</button>
@@ -51,7 +49,7 @@ function Activities() {
           onClick={() => setShowMap(!showMap)}
         >
           <svg className="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
             aria-hidden="true">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
             <circle cx="12" cy="10" r="3"></circle>
@@ -116,17 +114,27 @@ function Activities() {
           ))}
         </div>
 
+        <div className="activities-section-intro">
+          <h2>Aktiviteter nära dig</h2>
+          <p>
+            Här finns exempel på aktiviteter som kan passa olika hundägare,
+            från lugna promenader till sociala event.
+            </p>
+        </div>
+
         {filteredActivities.length > 0 ? (
           <div className="activities-grid">
             {filteredActivities.map((activity) => (
               <ActivityCard
                 key={activity.id}
                 title={activity.title}
-                // text={`${activity.description}`}
-                // text2={`${activity.location} • ${activity.distance}`}
-
-                text={`${activity.location} • ${activity.distance} — ${activity.description}`}
+                description={activity.description}
+                location={activity.location}
+                distance={activity.distance}
+                category={activity.category}
+                // text={`${activity.location} • ${activity.distance} — ${activity.description}`}
                 image={activity.image}
+                alt={activity.alt}
                 link={`/activities/${activity.id}`}
               />
             ))}

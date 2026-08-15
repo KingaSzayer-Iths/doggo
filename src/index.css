@@ -3,7 +3,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
@@ -13,7 +13,7 @@
 
 /* don't leave one single word hanging in paragraphs */
 p {
-    text-wrap: pretty;
+  text-wrap: pretty;
 }
 
 
@@ -225,11 +225,198 @@ main {
   gap: 1rem;
 }
 
-.activity-card {
-  background-color: white;
-  border-radius: 12px;
+.activities-section-intro {
+  margin-block-start: 4rem;
+  margin-block-end: 2rem;
+}
+
+.activities-section-intro h2 {
+  margin-block-end: 0.8rem;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.activities-section-intro p {
+  max-inline-size: 700px;
+  line-height: 1.7;
+}
+
+/* Detaljsidor för aktiviteter */
+.activity-page {
+  max-inline-size: 62.5rem;
+  margin-inline: auto;
+
+  padding-block: 3rem;
+  padding-inline: 1.5rem;
+}
+
+/* Rubrik och introduktion */
+.activity-header {
+  margin-block-end: 2rem;
+}
+
+.activity-header .eyebrow {
+  margin-block-end: 0.8rem;
+
+  color: #1f5f4a;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.activity-header h1 {
+  margin-block-end: 1rem;
+
+  color: #1f5f4a;
+
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.1;
+}
+
+.activity-header>p:last-child {
+  max-inline-size: 46.875rem;
+
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Huvudbild */
+.activity-figure {
+  margin-block-end: 3rem;
+
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+  border-radius: 1rem;
+
+  background-color: #fff;
+
+  box-shadow: 0 4px 10px rgb(0 0 0 / 8%);
+}
+
+.activity-figure img {
+  display: block;
+
+  inline-size: 100%;
+  max-block-size: 30rem;
+
+  object-fit: cover;
+}
+
+.activity-figure figcaption {
+  padding-block: 1rem;
+  padding-inline: 1.2rem;
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Gemensamt avstånd mellan sektioner */
+.activity-info,
+.activity-description,
+.activity-program,
+.activity-tips,
+.activity-questions {
+  margin-block-end: 3rem;
+}
+
+.activity-info h2,
+.activity-description h2,
+.activity-program h2,
+.activity-tips h2,
+.activity-questions h2 {
+  margin-block-end: 1rem;
+
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+/* Praktisk information */
+.activity-details {
+  display: grid;
+  gap: 0.8rem;
+
+  padding: 1.5rem;
+
+  border-radius: 1rem;
+
+  background-color: #fff;
+
+  box-shadow: 0 4px 10px rgb(0 0 0 / 8%);
+}
+
+.activity-details dt {
+  color: #1f5f4a;
+  font-weight: 800;
+}
+
+.activity-details dd {
+  margin-block-end: 0.8rem;
+}
+
+/* Längre beskrivning */
+.activity-description p {
+  margin-block-end: 1rem;
+  line-height: 1.8;
+}
+
+/* Program och tips */
+.activity-program ol,
+.activity-tips ul {
+  padding-inline-start: 1.4rem;
+  line-height: 1.8;
+}
+
+.activity-program li,
+.activity-tips li {
+  margin-block-end: 0.35rem;
+}
+
+/* Frågor */
+.activity-questions p {
+  max-inline-size: 46.875rem;
+  line-height: 1.7;
+}
+
+/* Tillbaka-knapp */
+.activity-footer {
+  margin-block-start: 3rem;
+}
+
+.activity-footer .button {
+  display: inline-block;
+
+  padding-block: 0.9rem;
+  padding-inline: 1.2rem;
+
+  border-radius: 0.625rem;
+
+  background-color: #1f5f4a;
+  color: #fff;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.activity-footer .button:hover {
+  background-color: #174536;
+  transform: translateY(-2px);
+}
+
+.activity-footer .button:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
+
+/* Aktivitetskort */
+.activity-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 8%);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -245,31 +432,76 @@ main {
   background-color: #d9d9d9;
 } */
 .card-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
   display: block;
+  inline-size: 100%;
+  block-size: 220px;
+  object-fit: cover;
   transition: transform 0.4s ease;
 }
 
 .card-content {
   /* padding: 24px 16px; */
   /* padding: 1.5rem; */
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
   ;
 }
 
-.card-content h2 {
-  margin-bottom: 1rem;
+.card-content h3 {
+  margin-block-end: 1rem;
+  font-size: 1.3rem;
   color: #222;
 }
 
 .card-content p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   line-height: 1.6;
 }
 
-.card-content button {
+/* Plats, avstånd och kategori */
+.activity-meta {
+  margin-block-end: 1.5rem;
+  padding-inline-start: 1.2rem;
+  line-height: 1.7;
+}
+
+.activity-meta li {
+  padding-inline-start: 0.2rem;
+}
+
+.activity-meta strong {
+  font-weight: 600;
+}
+
+/* Läs mer */
+.card-button {
+  display: inline-block;
+  padding-block: 0.8rem;
+  padding-inline: 1.2rem;
+  border-radius: 0.625rem;
+  background-color: #1f5f4a;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color .25s ease,
+    transform .25s ease;
+}
+
+.card-button:hover,
+.card-button:focus {
+  background-color: #174536;
+}
+
+.card-button:hover {
+  transform: translateY(-2px);
+}
+
+.card-button:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
+
+/* .card-content button {
   border: none;
   padding: 0.8rem 1.2rem;
   border-radius: 8px;
@@ -285,7 +517,7 @@ main {
 .card-content button:focus {
   outline: 3px solid black;
   outline-offset: 3px;
-}
+} */
 
 .footer {
   background-color: #1f5f4a;
@@ -749,7 +981,7 @@ main {
 
 
 /* Tablet */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .hero {
     padding: 6rem 4rem;
   }
@@ -794,11 +1026,19 @@ main {
   .tips-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .activity-details {
+    grid-template-columns: 10rem 1fr;
+  }
+
+  .activity-details dd {
+    margin-block-end: 0;
+  }
 }
 
 
 /* Desktop */
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .hero {
     padding: 8rem 6rem;
   }
@@ -832,6 +1072,11 @@ main {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 5rem 6rem;
+  }
+
+  .activity-page {
+    padding-block: 4rem;
+    padding-inline: 2rem;
   }
 }
 
